@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.alldeposite{
+    border-bottom: 1px solid #3E3830;
+    margin-top: 30px;
+}
+
+.table-div{
+    width: 97%;
+    height: 90vh;
+    border-radius: 5px;
+    margin: 0px 20px;
+    padding: 0px 20px;
+    background-color: #000;
+    border: 1px solid rgba(177, 141, 95, .651);
+    margin-top: 50px;
+}
+
+
+.table-div:hover{
+    box-shadow: 1px 0px 20px -1px #C3A177;
+    transition: 450ms;
+}
+
+
+.date{
+    height: 5.5vh;
+  width: 550px;
+
+}
+
+
+
+.input-div1{
+    margin-top: 10px;
+}
+
+.input-div1 h3{
+    color: white;
+}
+
+.input-div1 .date{
+    background: #272727;
+    border: transparent;
+    color: white;
+}
+
+.option-div h2{
+    color: white;
+}
+
+
+.input-frist-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.option-div .select{
+    background: #272727;
+    border: transparent;
+    color: white;
+    height: 5.5vh;
+  width: 550px;
+  appearance: none;
+}
+
+
+.option-div{
+    margin-top: 50px;
+}
+
+.buttons-div{
+    color: wheat;
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  
+}
+
+.buttons-div .search-button{
+    padding: 10px 10px;
+    border-radius: 5px;
+    width: 130px;
+}
+
+
+ .reset-button{
+    padding: 8px 15px;
+    width: 100px;
+    border-radius: 5px;
+    color: #C3A177;
+    background: black;
+    border: 1px solid #C3A177;
+  
+    display: flex;
+    align-items: center; 
+   
+}
+
+.search-button{
+    margin-right: 20px;
+    background: #C3A177;
+    color: black;
+}
+
+.four-button{
+    display: flex;
+    margin-top: 40px;
+   
+    
+}
+
+.inner-button{
+    background-color: black;
+    border:1px solid #6c757d;
+    color: white;
+    padding: 10px 10px;
+   
+}
+
+.inner-button:hover{
+    background: #6c757d;
+    transition: 350ms;
+    cursor: pointer;
+   
+}
+.main-table{
+    margin-top: 20px;
+}
+
+.tables{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    
+  
+}
+
+.tables th{
+    background: white;
+    padding: 10px 10px;
+
+}
+
+.tables td{
+    background: #BE9A64;
+    padding: 10px 10px;
+    border-bottom: 1px solid white;
+}
+
+
+@media(max-width:768px){
+    .input-frist-row{
+        flex-direction: column;
+      
+    }
+    .input-frist-row .input-div1{
+        width: 300px;
+    }
+    
+}
