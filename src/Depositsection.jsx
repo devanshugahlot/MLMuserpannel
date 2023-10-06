@@ -5,13 +5,12 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Collapse from "@mui/material/Collapse";
-
+import PeopleIcon from "@mui/icons-material/People";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import StarBorder from "@mui/icons-material/StarBorder";
 import { useNavigate } from "react-router-dom";
-
 
 export default function Depositesection() {
   const [open, setOpen] = React.useState(false);
@@ -24,7 +23,7 @@ export default function Depositesection() {
   return (
     <List sx={{ paddingBlock: "0px" }}>
       <ListItemButton onClick={handleClick}>
-        <ListItemIcon>
+        <ListItemIcon sx={{ minWidth: "37px" }}>
           <KeyboardBackspaceIcon sx={{ color: "white" }} />
         </ListItemIcon>
 
@@ -37,37 +36,53 @@ export default function Depositesection() {
             onClick={() => navigate("/Alldeposite")}
             sx={{ pl: 4 }}
           >
-            <ListItemIcon>
+            <PeopleIcon />
+            <ListItemIcon >
               <StarBorder />
             </ListItemIcon>
             <ListItemText primary=" ALL Deposite" />
           </ListItemButton>
 
-          <ListItemButton sx={{ pl: 4 }}>
+          <ListItemButton
+            onClick={() => navigate("/Approveddeposite")}
+            sx={{ pl: 4 }}
+          >
+            <PeopleIcon />
+
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
             <ListItemText
               primary="
-            Hello section"
+           APPROVED DEPOSITE"
             />
           </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
+          <ListItemButton
+            onClick={() => navigate("/Penndingdeposite")}
+            sx={{ pl: 4 }}
+          >
+            <PeopleIcon />
+
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
             <ListItemText
               primary="
-            Hello section"
+            Pennding deposite"
             />
           </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
+          <ListItemButton
+            onClick={() => navigate("/Rejectdeposite")}
+            sx={{ pl: 4 }}
+          >
+            <PeopleIcon />
+
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
             <ListItemText
               primary="
-            Hello section"
+            Reject Deposite"
             />
           </ListItemButton>
         </List>

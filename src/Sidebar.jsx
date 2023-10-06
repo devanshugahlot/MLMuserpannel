@@ -33,6 +33,29 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Profile from "./Profile";
 import Alldeposite from "./Alldeposite";
+import Approveddeposite from "./Approveddeposite";
+import Penndingdeposite from "./Penndingdeposite";
+import Rejectdeposite from "./Rejectdeposite";
+import Investments from "./Investments";
+import Investmenthistory from "./Investmenthistory";
+import Admininvestmenthistory from "./Admininvestmenthistory";
+import Fundtransfers from "./Fundtransfers";
+import Usertransfarhistory from "./Usertransfarhistory";
+import Admintransfarhistory from "./Admintransfarhistory";
+import Alluser from "./Alluser";
+import Activeuser from "./Activeuser";
+import Inactiveusers from "./Inactiveusers";
+import Blockuser from "./Blockuser";
+import Mydirectteam from "./Mydirectteam";
+import Totalincome from "./Totalincome";
+import Roiincome from "./Roiincome";
+import Levelincome from "./Levelincome";
+import Rewardincome from "./Rewardincome";
+import Sendrequest from "./Sendrequest";
+import Wallethistory from "./Wallethistory";
+import Transction from "./Transction";
+import MenuAppBar from "./Avatar";
+
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
@@ -59,7 +82,7 @@ function ResponsiveDrawer(props) {
         {["Dashboard"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton onClick={() => navigate("/")}>
-              <ListItemIcon>
+              <ListItemIcon sx={{ minWidth: "37px" }}>
                 <AvTimerIcon sx={{ color: "#D8AF72" }} />
               </ListItemIcon>
               <ListItemText primary={text} />
@@ -77,7 +100,7 @@ function ResponsiveDrawer(props) {
         {["profile "].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton onClick={() => navigate("/Profile")}>
-              <ListItemIcon>
+              <ListItemIcon sx={{ minWidth: "37px" }}>
                 <ManageAccountsIcon sx={{ color: "#D8AF72" }} />
               </ListItemIcon>
               <ListItemText primary={text} />
@@ -148,8 +171,8 @@ function ResponsiveDrawer(props) {
       >
         {["transction"].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
+            <ListItemButton onClick={() => navigate("/Transction")}>
+              <ListItemIcon sx={{ minWidth: "37px" }}>
                 <MoveUpIcon sx={{ color: "#D8AF72" }} />
               </ListItemIcon>
               <ListItemText primary={text} />
@@ -229,7 +252,7 @@ function ResponsiveDrawer(props) {
             {/* </div> */}
           </Typography>
           <div className="right-icon">
-            <PersonIcon style={{ color: "gold" }} />
+            <MenuAppBar />
           </div>
         </Toolbar>
       </AppBar>
@@ -285,11 +308,43 @@ function ResponsiveDrawer(props) {
       >
         <Toolbar />
 
-        <Routes>
+        {/* <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/Alldeposite" element={<Alldeposite />} />
-        </Routes>
+          <Route path="/Approveddeposite" element={<Approveddeposite />} />
+          <Route path="/Penndingdeposite" element={<Penndingdeposite />} />
+          <Route path="/Rejectdeposite" element={<Rejectdeposite />} />
+          <Route path="/Investments" element={<Investments />} />
+          <Route path="/Investmenthistory" element={<Investmenthistory />} />
+          <Route
+            path="/Admininvestmenthistory"
+            element={<Admininvestmenthistory />}
+          />
+          <Route path="/Fundtransfers" element={<Fundtransfers />} />
+          <Route
+            path="/Usertransfarhistory"
+            element={<Usertransfarhistory />}
+          />
+          <Route
+            path="/Admintransfarhistory"
+            element={<Admintransfarhistory />}
+          />
+          <Route path="/Alluser" element={<Alluser />} />
+          <Route path="/Activeuser" element={<Activeuser />} />
+          <Route path="/Inactiveusers" element={<Inactiveusers />} />
+          <Route path="/Blockuser" element={<Blockuser />} />
+          <Route path="/Mydirectteam" element={<Mydirectteam />} />
+          <Route path="/Totalincome" element={<Totalincome />} />
+          <Route path="/Roiincome" element={<Roiincome />} />
+          <Route path="/Levelincome" element={<Levelincome />} />
+          <Route path="/Rewardincome" element={<Rewardincome />} />
+          <Route path="/Sendrequest" element={<Sendrequest />} />
+          <Route path="/Wallethistory" element={<Wallethistory />} />
+          <Route path="/Transction" element={<Transction />} />
+        </Routes> */}
+
+        {props.outlet}
       </Box>
     </Box>
   );

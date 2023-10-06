@@ -1,10 +1,10 @@
 import React from "react";
 import "./Alldeposite.css";
 import RotateLeftIcon from "@mui/icons-material/RotateLeft";
-const Alldeposite = () => {
+const Penndingdeposite = () => {
   return (
     <div className="AllDeposite">
-      <h2 className="heading">All Deposite</h2>
+      <h2 className="heading">Pending Deposite</h2>
       <div className="Table-div">
         <div className="input-first-row">
           <div className="input-first">
@@ -17,15 +17,6 @@ const Alldeposite = () => {
           </div>
         </div>
 
-        <div className="Second-input">
-          <h1>Search By status</h1>
-          <select>
-            <option value="Select">---Select---</option>
-            <option>Pending</option>
-            <option>Reject</option>
-            <option>Apporve</option>
-          </select>
-        </div>
         <div className="center-button">
           <button className="Search">Search Now</button>
           <button className="Reset">
@@ -88,4 +79,4 @@ const Alldeposite = () => {
   );
 };
 
-export default Alldeposite;
+export default Penndingdeposite;

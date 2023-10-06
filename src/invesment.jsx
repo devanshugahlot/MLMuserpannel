@@ -5,14 +5,16 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Collapse from "@mui/material/Collapse";
-
+import PeopleIcon from "@mui/icons-material/People";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import StarBorder from "@mui/icons-material/StarBorder";
+import { useNavigate } from "react-router-dom";
 
 export default function Investment() {
   const [open, setOpen] = React.useState(false);
+  const navigate = useNavigate();
 
   const handleClick = () => {
     setOpen(!open);
@@ -21,7 +23,7 @@ export default function Investment() {
   return (
     <List sx={{ paddingBlock: "0px" }}>
       <ListItemButton onClick={handleClick}>
-        <ListItemIcon>
+        <ListItemIcon sx={{ minWidth: "37px" }}>
           <KeyboardBackspaceIcon sx={{ color: "white" }} />
         </ListItemIcon>
 
@@ -30,38 +32,41 @@ export default function Investment() {
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 4 }}>
+          <ListItemButton
+            onClick={() => navigate("/Investments")}
+            sx={{ pl: 4 }}
+          >
+            <PeopleIcon />
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
-            <ListItemText primary="Deposite section" />
+            <ListItemText primary="Investments" />
           </ListItemButton>
 
-          <ListItemButton sx={{ pl: 4 }}>
+          <ListItemButton
+            onClick={() => navigate("/Investmenthistory")}
+            sx={{ pl: 4 }}
+          >
+            <PeopleIcon />
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
             <ListItemText
               primary="
-            Hello section"
+            investment history"
             />
           </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
+          <ListItemButton
+            onClick={() => navigate("/Admininvestmenthistory")}
+            sx={{ pl: 4 }}
+          >
+            <PeopleIcon />
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
             <ListItemText
               primary="
-            Hello section"
-            />
-          </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText
-              primary="
-            Hello section"
+              Admin Investment History"
             />
           </ListItemButton>
         </List>

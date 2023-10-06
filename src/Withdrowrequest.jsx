@@ -5,15 +5,17 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Collapse from "@mui/material/Collapse";
+import PeopleIcon from "@mui/icons-material/People";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import StarBorder from "@mui/icons-material/StarBorder";
+import { useNavigate } from "react-router-dom";
 
 export default function Withdraw() {
   const [open, setOpen] = React.useState(false);
-
+  const navigate = useNavigate();
   const handleClick = () => {
     setOpen(!open);
   };
@@ -21,7 +23,7 @@ export default function Withdraw() {
   return (
     <List sx={{ paddingBlock: "0px" }}>
       <ListItemButton onClick={handleClick}>
-        <ListItemIcon>
+        <ListItemIcon sx={{ minWidth: "37px" }}>
           <AccountBalanceIcon sx={{ color: "#D8AF72" }} />
         </ListItemIcon>
 
@@ -30,38 +32,28 @@ export default function Withdraw() {
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 4 }}>
+          <ListItemButton
+            onClick={() => navigate("/Sendrequest")}
+            sx={{ pl: 4 }}
+          >
+            <PeopleIcon />
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
-            <ListItemText primary="Deposite section" />
+            <ListItemText primary="Send Request" />
           </ListItemButton>
 
-          <ListItemButton sx={{ pl: 4 }}>
+          <ListItemButton
+            onClick={() => navigate("/Wallethistory")}
+            sx={{ pl: 4 }}
+          >
+            <PeopleIcon />
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
             <ListItemText
               primary="
-            Hello section"
-            />
-          </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText
-              primary="
-            Hello section"
-            />
-          </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText
-              primary="
-            Hello section"
+            Wallet History"
             />
           </ListItemButton>
         </List>

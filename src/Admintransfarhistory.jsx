@@ -1,10 +1,11 @@
 import React from "react";
 import "./Alldeposite.css";
 import RotateLeftIcon from "@mui/icons-material/RotateLeft";
-const Alldeposite = () => {
+
+const Admintransfarhistory = () => {
   return (
     <div className="AllDeposite">
-      <h2 className="heading">All Deposite</h2>
+      <h2 className="heading">Admin Transfer Funds</h2>
       <div className="Table-div">
         <div className="input-first-row">
           <div className="input-first">
@@ -29,7 +30,7 @@ const Alldeposite = () => {
         <div className="center-button">
           <button className="Search">Search Now</button>
           <button className="Reset">
-            Reset <RotateLeftIcon />{" "}
+            Reset <RotateLeftIcon />
           </button>
           {/* <div className="searchnow"></div> */}
         </div>
@@ -40,7 +41,10 @@ const Alldeposite = () => {
           <button className="">CSV</button>
           <button className="Radius-button2">Print</button>
         </div>
-        <div className="table">
+        <div
+          style={{ height: "22vh", background: "#C3A177" }}
+          className="table"
+        >
           <table>
             <tr>
               <th>SR. No.</th>
@@ -53,34 +57,15 @@ const Alldeposite = () => {
             </tr>
 
             <tr>
-              <td>1</td>
-              <td>100</td>
-              <td>Image1.jpg</td>
-              <td>Active</td>
-              <td>Sample message 1</td>
-              <td>26/9/23</td>
-              <td>4:00:00 PM</td>
+              <td>No results found</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
-
-            <tr>
-              <td>2</td>
-              <td>100</td>
-              <td>Image2.jpg</td>
-              <td>InActive</td>
-              <td>Sample message 2</td>
-              <td>27/9/23</td>
-              <td>5:00:00 PM</td>
-            </tr>
-
-            <tr>
-              <td>2</td>
-              <td>100</td>
-              <td>Image2.jpg</td>
-              <td>InActive</td>
-              <td>Sample message 2</td>
-              <td>27/9/23</td>
-              <td>5:00:00 PM</td>
-            </tr>
+            <tr></tr>
           </table>
         </div>
       </div>
@@ -88,4 +73,4 @@ const Alldeposite = () => {
   );
 };
 
-export default Alldeposite;
+export default Admintransfarhistory;

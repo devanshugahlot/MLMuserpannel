@@ -1,10 +1,10 @@
 import React from "react";
 import "./Alldeposite.css";
 import RotateLeftIcon from "@mui/icons-material/RotateLeft";
-const Alldeposite = () => {
+const Investmenthistory = () => {
   return (
     <div className="AllDeposite">
-      <h2 className="heading">All Deposite</h2>
+      <h2 className="heading">Investment History</h2>
       <div className="Table-div">
         <div className="input-first-row">
           <div className="input-first">
@@ -27,7 +27,7 @@ const Alldeposite = () => {
           </select>
         </div>
         <div className="center-button">
-          <button className="Search">Search Now</button>
+          <button className="Search">Search </button>
           <button className="Reset">
             Reset <RotateLeftIcon />{" "}
           </button>
@@ -40,8 +40,29 @@ const Alldeposite = () => {
           <button className="">CSV</button>
           <button className="Radius-button2">Print</button>
         </div>
-        <div className="table">
-          <table>
+        <div
+          style={{
+            height: "30vh",
+            background: "#C3A177",
+            padding: "20px 10px ",
+          }}
+          className="table"
+        >
+          <div
+            className="table-button"
+            style={{
+              display: "flex",
+              gap: "10px",
+            }}
+          >
+            <button className="Transfer" style={{ color: "white" }}>
+              Transfer History
+            </button>
+            <button className="Recieve" style={{ color: "white" }}>
+              Recieve History
+            </button>
+          </div>
+          <table style={{ marginTop: "40px" }}>
             <tr>
               <th>SR. No.</th>
               <th>Amount</th>
@@ -51,36 +72,6 @@ const Alldeposite = () => {
               <th>Date</th>
               <th>Time</th>
             </tr>
-
-            <tr>
-              <td>1</td>
-              <td>100</td>
-              <td>Image1.jpg</td>
-              <td>Active</td>
-              <td>Sample message 1</td>
-              <td>26/9/23</td>
-              <td>4:00:00 PM</td>
-            </tr>
-
-            <tr>
-              <td>2</td>
-              <td>100</td>
-              <td>Image2.jpg</td>
-              <td>InActive</td>
-              <td>Sample message 2</td>
-              <td>27/9/23</td>
-              <td>5:00:00 PM</td>
-            </tr>
-
-            <tr>
-              <td>2</td>
-              <td>100</td>
-              <td>Image2.jpg</td>
-              <td>InActive</td>
-              <td>Sample message 2</td>
-              <td>27/9/23</td>
-              <td>5:00:00 PM</td>
-            </tr>
           </table>
         </div>
       </div>
@@ -88,4 +79,4 @@ const Alldeposite = () => {
   );
 };
 
-export default Alldeposite;
+export default Investmenthistory;

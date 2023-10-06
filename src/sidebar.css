@@ -7,10 +7,7 @@
     border-radius: 5px;
     padding: 5px;
     margin-left: 7px;
-    
-    
-  
-    
+ 
 }
 
 .second-wallet{
@@ -106,12 +103,12 @@
 } */
 
 
-.css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
     background-color: #272727;
     color: rgba(0, 0, 0, 0.87);
     -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2), 0px 16px 24px 2px rgba(0,0,0,0.14), 0px 6px 30px 5px rgba(0,0,0,0.12);
+    box-shadow: none;
     overflow-y: auto;
     display: -webkit-box;
     display: -webkit-flex;
@@ -130,4 +127,44 @@
     top: 0;
     outline: 0;
     left: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+    
+    .second-wallet{
+        width: 70px;
+    }
+    .frist-wallet{
+        width: 70px;
+
+    }
+
+    
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+    background-color: #272727;
+    color: rgba(0, 0, 0, 0.87);
+    -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    box-shadow: none;
+    overflow-y: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    z-index: 1200;
+    -webkit-overflow-scrolling: touch;
+    position: fixed;
+    top: 0;
+    outline: 0;
+    left: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
 }

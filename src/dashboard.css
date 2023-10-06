@@ -148,6 +148,20 @@ background-color: black;
    
 }
 
+.second-container-second{
+    display: flex;
+  justify-content: center; 
+  align-items: center;
+ 
+}
+
+.container-3-third{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    
+}
+
 
 @media(max-width:768px){
     .heading-div {
@@ -187,8 +201,39 @@ background-color: black;
 
     }
     
-
     
-
+    
     
 }
+    @media(max-width:1200px) and (min-width:968px){
+       .five-div .General-Detail{
+        width: 200px;
+       }
+
+       .container-3{
+        display: flex;
+    }
+   .frist-div .General-Detail{
+    width: 280px;
+   }
+
+
+  .hello .third-div .General-Detail{
+    width: 280px;
+    margin-right: 50px;
+   }
+
+   .forth-div .General-Detail{
+    width: 280px;
+   }
+
+   .second-div .Referal-Link{
+    width: 280px;
+   }
+
+   .second-div .Referal-Link img {
+        width: 255px;
+        margin-right: 20px;
+   }
+
+    }
